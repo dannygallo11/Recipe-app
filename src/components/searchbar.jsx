@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import './searchbar.css'
 
 function SearchBar() {
     const searchRef = useRef()
@@ -9,7 +10,7 @@ function SearchBar() {
     }
 
     return(
-        <>
+        <div class="searchBar">
             <form onSubmit={onSubmit}>
                 <label htmlFor="search">Search for recipe</label><br></br>
                 <input 
@@ -20,7 +21,7 @@ function SearchBar() {
                 />
                 <button type="submit">Search</button>
             </form>
-        </>
+        </div>
     )
 };
 
