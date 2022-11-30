@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import './searchbar.css'
 
+
+const getAPI = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+}
+
+
 function SearchBar() {
     const searchRef = useRef()
 
@@ -10,7 +18,7 @@ function SearchBar() {
     }
 
     return(
-        <div class="searchBar">
+        <div className="searchBar">
             <form onSubmit={onSubmit}>
                 <label htmlFor="search">Search for recipe</label><br></br>
                 <input 
@@ -19,7 +27,7 @@ function SearchBar() {
                     placeholder="Insert recipe or ingredient"
                     id="searchBar"
                 />
-                <button type="submit">Search</button>
+                <button onClick={getAPI} type="submit">Search</button>
             </form>
         </div>
     )
