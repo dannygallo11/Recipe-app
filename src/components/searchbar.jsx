@@ -2,14 +2,8 @@ import React, { useRef } from "react";
 import './searchbar.css'
 
 
-const getAPI = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-}
 
-
-function SearchBar() {
+function SearchBar({getAPI}) {
     const searchRef = useRef()
 
     function onSubmit(e) {
