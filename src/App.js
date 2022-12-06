@@ -1,11 +1,12 @@
 import Search from "./pages/Search";
 import React from "react";
+import SearchBar from "./components/searchbar";
 
 
 function App() {
   return (
     <div>
-      <Search/>
+      <SearchBar />
     </div>
   );
 }

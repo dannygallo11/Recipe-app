@@ -2,16 +2,33 @@ import SearchBar from "../components/searchbar";
 import React from "react";
 
 
-function Search(){
-    const getAPI = () => {
-        fetch('https://jsonplaceholder.typicode.com/posts/1')
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-}
-    return <SearchBar getAPI={getAPI}/>
-}
+var myHeaders = new Headers();
+myHeaders.append("apikey", "dWtOcLMwKxX8LxlurntuLm4pLTD2bMwv");
 
-export default Search
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
+// function Search(){
+
+//     // const getAPI = () => {
+//     //     fetch("https://api.apilayer.com/spoonacular/recipes/complexSearch?query="+searched+"", requestOptions)
+//     //     .then((response) => response.json())
+//     //     .then((json) => console.log(json)); 
+//     // }
+//     return <SearchBar getAPI={getAPI}/>
+// };
+
+//export default Search
+
+
+// function Search(){
+//     const getAPI = () => {
+//         fetch('https://jsonplaceholder.typicode.com/posts/')
+//         .then((response) => response.json())
+//         .then((json) => console.log(json));
 
 // getting recipe title from api data
 //var recipeTitle = results[0].title
