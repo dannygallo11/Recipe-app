@@ -1,5 +1,5 @@
 import SearchBar from "./searchbar";
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 const GlobalSearch = () => {
     const [item, setItem] = useState()
@@ -14,14 +14,11 @@ const GlobalSearch = () => {
 
     return <>
     <SearchBar handleItem={handleItem} item={item} setRecipes={setRecipes}/>
-    <li>
-       { recipes.map(obj => <div>{obj.title}</div>)}
-    </li>
+    { recipes.map(obj => <div>{obj.title}</div>)}
     </>
 }
 
 
 
+export default GlobalSearch;
 
-
-export default GlobalSearch
