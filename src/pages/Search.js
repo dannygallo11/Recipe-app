@@ -1,15 +1,15 @@
-import SearchBar from "../components/searchbar";
-import React from "react";
+// import SearchBar from "../components/searchbar";
+// import React from "react";
 
 
-var myHeaders = new Headers();
-myHeaders.append("apikey", "dWtOcLMwKxX8LxlurntuLm4pLTD2bMwv");
+// var myHeaders = new Headers();
+// myHeaders.append("apikey", "dWtOcLMwKxX8LxlurntuLm4pLTD2bMwv");
 
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
-};
+// var requestOptions = {
+//   method: 'GET',
+//   redirect: 'follow',
+//   headers: myHeaders
+// };
 
 // function Search(){
 
