@@ -14,9 +14,7 @@ const GlobalSearch = () => {
 
     return <>
     <SearchBar handleItem={handleItem} item={item} setRecipes={setRecipes}/>
-    <li>
-       { recipes.map(obj => <div>{obj.title}</div>)}
-    </li>
+    { recipes.map(obj => <div>{obj.title}</div>)}
     </>
 }
 
@@ -24,4 +22,4 @@ const GlobalSearch = () => {
 
 
 
-export default GlobalSearch
+export default GlobalSearch;
