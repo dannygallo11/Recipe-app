@@ -4,4 +4,4 @@ Once you identify the recipe you would like, you will be able to add the content
 
 This app uses HTML, CSS, Javascript & React.js for front end. 
 
-It also uses Node.js & Express.js to communicate with Spoontacular API, which is the API for the recipe information.
+It will use fetch to communicate with Spoontacular API, which is the API for the recipe information.
