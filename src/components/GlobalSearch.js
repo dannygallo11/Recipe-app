@@ -1,5 +1,5 @@
 import SearchBar from "./searchbar";
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 const GlobalSearch = () => {
     const [item, setItem] = useState()
@@ -19,7 +19,5 @@ const GlobalSearch = () => {
 }
 
 
-
-
-
 export default GlobalSearch;
+
