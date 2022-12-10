@@ -18,7 +18,7 @@ function SearchBar({handleItem, item, setRecipes}) {
 
 // get fetch request once the submit button is clicked. 
     const getAPI = () => {
-        console.log(item)
+        // console.log(item)
         fetch("https://api.apilayer.com/spoonacular/recipes/complexSearch?query="+ item +"&addRecipeInformation=true&number=1000", requestOptions)
         .then(response => response.json())
         .then(result =>  setRecipes(result.results))
