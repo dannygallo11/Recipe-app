@@ -2,7 +2,6 @@ import React from "react";
 import './searchbar.css'
 
 
-
 function SearchBar({handleItem, item, setRecipes}) {
 
 // header info for api calls to spoonacular API
@@ -15,14 +14,13 @@ function SearchBar({handleItem, item, setRecipes}) {
         headers: myHeaders
     }
 
-
+// get request for the query search (recipe name, ingredient, diet, cuisines)
     const getAPI = () => {
-        console.log(item)
+        // console.log(item)
         fetch("https://api.apilayer.com/spoonacular/recipes/complexSearch?query="+ item +"&addRecipeInformation=true&number=5000", requestOptions)
         .then(response => response.json())
-        .then(result =>  setRecipes(result.results))
+        .then(response =>  setRecipes(response.results))
     }
-
 
     return(
         <div className="searchBar">

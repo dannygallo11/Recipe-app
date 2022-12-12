@@ -2,6 +2,7 @@ import SearchBar from "./searchbar";
 import React, { useState } from "react";
 
 const GlobalSearch = () => {
+    
     const [item, setItem] = useState()
     const [recipes, setRecipes] = useState([])
 
@@ -14,7 +15,12 @@ const GlobalSearch = () => {
 
     return <>
     <SearchBar handleItem={handleItem} item={item} setRecipes={setRecipes}/>
-    { recipes.map(obj => <div>{obj.title}</div>)}
+    { recipes.map((obj) => (
+        <div>
+        <div>{obj.title}</div>
+        <img src={obj.image} alt="recipe"></img>
+        </div>
+    ))}
     </>
 }
 
