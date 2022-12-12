@@ -16,10 +16,9 @@ function SearchBar({handleItem, item, setRecipes}) {
 
 // get request for the query search (recipe name, ingredient, diet, cuisines)
     const getAPI = () => {
-        // console.log(item)
         fetch("https://api.apilayer.com/spoonacular/recipes/complexSearch?query="+ item +"&addRecipeInformation=true&number=5000", requestOptions)
         .then(response => response.json())
-        .then(response =>  setRecipes(response.results))
+        .then(response => setRecipes(response.results))
     }
 
     return(

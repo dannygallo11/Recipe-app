@@ -9,7 +9,7 @@ const GlobalSearch = () => {
     const handleItem = (e) => {
         let value = e.target.value
         setItem(value)
-        // console.log('global search component', item)
+        // console.log('gloanl search component', item)
         // console.log(recipes)
     }
 
