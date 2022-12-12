@@ -15,14 +15,15 @@ const GlobalSearch = () => {
 
     return <>
     <SearchBar handleItem={handleItem} item={item} setRecipes={setRecipes}/>
-    { recipes.map((obj) => (
+    {recipes.map((recipe) => (
         <div>
-        <div>{obj.title}</div>
-        <img src={obj.image} alt="recipe"></img>
+        <div>{recipe.title}</div>
+        <img src={recipe.image} alt="recipe"></img>
+        <p>{recipe.summary}</p>
         </div>
     ))}
     </>
-}
+};
 
 
 export default GlobalSearch;
