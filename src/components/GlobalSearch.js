@@ -1,5 +1,6 @@
 import SearchBar from "./searchbar";
 import React, { useState } from "react";
+import RecipeList from "./RecipeList";
 
 const GlobalSearch = () => {
     
@@ -10,18 +11,16 @@ const GlobalSearch = () => {
         let value = e.target.value
         setItem(value)
         // console.log('gloanl search component', item)
-        // console.log(recipes)
+        // console.log(recipes.img)
     }
 
     return <>
-    <SearchBar handleItem={handleItem} item={item} setRecipes={setRecipes}/>
-    {recipes.map((recipe) => (
-        <div>
-        <div>{recipe.title}</div>
-        <img src={recipe.image} alt="recipe"></img>
-        <p>{recipe.summary}</p>
-        </div>
-    ))}
+    <SearchBar 
+        handleItem={handleItem} 
+        item={item} 
+        setRecipes={setRecipes}
+    />
+    <RecipeList recipes={recipes}/>
     </>
 };
 

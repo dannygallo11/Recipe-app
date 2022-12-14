@@ -3,13 +3,15 @@ import React from "react";
 
 function RecipeList({recipes}) {
 
-    {recipes.map((recipe) => (
+    recipes.map((obj) => (
         <div>
-        <div>{recipe.title}</div>
-        <img src={recipe.image} alt="recipe"></img>
-        <p>{recipe.readyInMinutes}</p>
+        <div>{obj.title}</div>
+        <img src={obj.image} alt="recipe"></img>
+        <p>this is a recipe time</p>
         </div>
-    ))}
+    ))
 };
 
 export default RecipeList;
+
+
